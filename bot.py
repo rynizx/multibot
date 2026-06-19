@@ -14,6 +14,7 @@ bot = commands.Bot(command_prefix=botPrefix,intents=discord.Intents.all())
 
 # Using on_ready() so if the bot runs the user knows its running
 
+bot = commands.Bot(command_prefix=os.getenv("PREFIX"), intents=discord.Intents.all())
 @bot.event
 async def on_ready():
     print(f"{bot.user} has woke up from the multibot grave!")
